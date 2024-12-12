@@ -1,26 +1,29 @@
 import "./styles/App.css";
 import Footer from "./components/Footer";
-import VersionDetails from "./components/VersionDetails";
-import FeatureHighlights from "./components/FeatureHighlights";
-import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
 import { useState } from "react";
 
 function App() {
   const [selectedVersion, setSelectedVersion] = useState("express");
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
-      <Navbar
-        selectedVersion={selectedVersion}
-        setSelectedVersion={setSelectedVersion}
-      />
-      <main className="flex-grow">
-        <Hero />
-        <FeatureHighlights />
-        <VersionDetails selectedVersion={selectedVersion} />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="min-h-screen bg-gray-50 flex flex-col">
+        <Navbar
+          selectedVersion={selectedVersion}
+          setSelectedVersion={setSelectedVersion}
+        />
+        <Routes>
+          <Route
+            path="/"
+            exact
+            element={<Home selectedVersion={selectedVersion} />}
+          />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
