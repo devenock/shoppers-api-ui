@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <section className="bg-blue-600 text-white py-20">
+    <section className="bg-[#023047] text-white py-20">
       <div className="container mx-auto px-4 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-6">
           Powerful E-Commerce API
