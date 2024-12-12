@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -11,9 +12,12 @@ export default function Hero() {
           Build robust and scalable e-commerce solutions with our flexible API,
           available in Express.js, NestJS, and Go.
         </p>
-        <button className="bg-white text-[#023047] font-bold py-2 px-6 rounded-lg text-lg hover:bg-blue-100 transition duration-300">
+        <Link
+          to="/docs"
+          className="bg-white text-[#023047] font-bold py-2 px-6 rounded-lg text-lg hover:bg-blue-100 transition duration-300"
+        >
           Get Started
-        </button>
+        </Link>
       </div>
     </section>
   );
