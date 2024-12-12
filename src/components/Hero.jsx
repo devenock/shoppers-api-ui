@@ -11,7 +11,7 @@ export default function Hero() {
           Build robust and scalable e-commerce solutions with our flexible API,
           available in Express.js, NestJS, and Go.
         </p>
-        <button className="bg-white text-blue-600 font-bold py-2 px-6 rounded-lg text-lg hover:bg-blue-100 transition duration-300">
+        <button className="bg-white text-[#023047] font-bold py-2 px-6 rounded-lg text-lg hover:bg-blue-100 transition duration-300">
           Get Started
         </button>
       </div>
