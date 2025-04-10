@@ -985,6 +985,52 @@ function App() {
         </header>
 
         <main className="content">
+          {/*<Routes>*/}
+          {/*  <Route*/}
+          {/*    path="/"*/}
+          {/*    element={*/}
+          {/*      <PageTransition>*/}
+          {/*        <Home*/}
+          {/*          apiVersions={apiVersions}*/}
+          {/*          selectedVersion={selectedVersion}*/}
+          {/*        />*/}
+          {/*      </PageTransition>*/}
+          {/*    }*/}
+          {/*  />*/}
+          {/*  <Route*/}
+          {/*    path="/docs"*/}
+          {/*    element={*/}
+          {/*      <PageTransition>*/}
+          {/*        <ApiDocumentation*/}
+          {/*          apiVersion={selectedVersion}*/}
+          {/*          apiEndpoints={apiEndpoints}*/}
+          {/*        />*/}
+          {/*      </PageTransition>*/}
+          {/*    }*/}
+          {/*  />*/}
+          {/*  <Route*/}
+          {/*    path="/docs/:section"*/}
+          {/*    element={*/}
+          {/*      <PageTransition>*/}
+          {/*        <ApiDocumentation*/}
+          {/*          apiVersion={selectedVersion}*/}
+          {/*          apiEndpoints={apiEndpoints}*/}
+          {/*        />*/}
+          {/*      </PageTransition>*/}
+          {/*    }*/}
+          {/*  />*/}
+          {/*  <Route*/}
+          {/*    path="/sandbox"*/}
+          {/*    element={*/}
+          {/*      <PageTransition>*/}
+          {/*        <ApiSandbox*/}
+          {/*          apiVersion={selectedVersion}*/}
+          {/*          apiEndpoints={apiEndpoints}*/}
+          {/*        />*/}
+          {/*      </PageTransition>*/}
+          {/*    }*/}
+          {/*  />*/}
+          {/*</Routes>*/}
           <Routes>
             <Route
               path="/"
@@ -1021,6 +1067,17 @@ function App() {
             />
             <Route
               path="/sandbox"
+              element={
+                <PageTransition>
+                  <ApiSandbox
+                    apiVersion={selectedVersion}
+                    apiEndpoints={apiEndpoints}
+                  />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/sandbox/:section"
               element={
                 <PageTransition>
                   <ApiSandbox
