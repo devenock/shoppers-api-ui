@@ -875,6 +875,7 @@ interface ApiVersion {
 interface ApiSandboxProps {
   apiVersion: ApiVersion;
   apiEndpoints: ApiSection[];
+  isDarkMode?: boolean;
 }
 
 // SVG Icons for UI enhancement
@@ -1138,6 +1139,7 @@ type TabType = "params" | "body" | "headers" | "response";
 const ApiSandbox: React.FC<ApiSandboxProps> = ({
   apiVersion,
   apiEndpoints,
+  isDarkMode = false,
 }) => {
   // Get section from URL params (if available)
   const { section } = useParams<{ section?: string }>();
